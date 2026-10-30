@@ -9,6 +9,9 @@ package.name = silpia
 # (str) Package domain (needed for android packaging)
 package.domain = org.silpia
 
+# (str) Source directory where your app files are located
+source.dir = .
+
 # (list) Source files to include (let it include python files and assets)
 source.include_exts = py,png,jpg,kv,atlas,mp3,txt
 
@@ -22,7 +25,7 @@ source.include_patterns = assets/*,images/*.png
 version = 1.0
 
 # (list) Application requirements
-# Note: pyttsx3 aur playsound ki jagah android par gtts aur android sound APIs behtar kaam karte hain, 
+# Note: pyttsx3 aur playsound ki jagah android par gtts aur android sound APIs behtar kaam karte hain,
 # lekin filhal hum aapki zaroorat ke hisaab se core libraries daal rahe hain.
 requirements = python3,kivy,speechrecognition,pyautogui,opencv-python,gtts,playsound
 
