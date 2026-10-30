@@ -27,7 +27,7 @@ version = 1.0
 # (list) Application requirements
 # Note: pyttsx3 aur playsound ki jagah android par gtts aur android sound APIs behtar kaam karte hain,
 # lekin filhal hum aapki zaroorat ke hisaab se core libraries daal rahe hain.
-requirements = python3,kivy,speechrecognition,gtts,playsound
+requirements = python3,kivy
 
 # (str) Supported orientations
 orientation = portrait
