@@ -37,16 +37,16 @@ orientation = portrait
 android.permissions = INTERNET,RECORD_AUDIO,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,CAMERA
 
 # (int) Target Android API, should be as high as possible.
-android.api = 33
+android.api = 31
 
 # (int) Minimum API your APK will support.
 android.minapi = 21
 
 # (str) Android SDK version to use
-android.sdk = 30
+android.sdk = 31
 
 # (str) Android NDK version to use
 android.ndk = 25b
 
 # (bool) Enable Android auto backup
-android.allow_backup = True
+android.accept_sdk_license = True
