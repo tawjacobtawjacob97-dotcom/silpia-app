@@ -1,9 +1,7 @@
 import speech_recognition as sr
-import pyautogui
 import time
 import os
 import datetime
-import cv2
 from gtts import gTTS
 from playsound import playsound
 
@@ -24,12 +22,6 @@ def save_chat_data(command):
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open("silpia_data_log.txt", "a", encoding="utf-8") as file:
         file.write(f"[{current_time}] User Command: {command}\n")
-
-def save_custom_knowledge(category, title, description):
-    filename = "nishi_dictionary.txt" if category == "nishi" else ("local_traditional_medicines.txt" if category == "medicine" else "silpia_knowledge.txt")
-    with open(filename, "a", encoding="utf-8") as file:
-        file.write(f"Title: {title} | Content: {description}\n")
-    speak("Yeh jankari maine local database mein save kar di hai sir")
 
 def tell_current_date_and_time():
     now = datetime.datetime.now()
@@ -80,13 +72,12 @@ def listen_command():
         return ""
 
 if __name__ == "__main__":
-    # Silent startup, waiting for commands directly
+    speak("Silpia system active ho gaya hai sir.")
     while True:
         query = listen_command()
         if query == "":
             continue
             
-        # Direct command processing without extra waiting loops
         if any(w in query for w in ["kaise ho", "kya haal hai", "how are you", "sab theek", "haal"]):
             speak("Main ekdam maze mein hoon sir Bataiye aaj kya karna hai")
         elif any(w in query for w in ["thank you", "shukriya", "dhanyawad", "thank"]):
@@ -101,19 +92,9 @@ if __name__ == "__main__":
         elif any(w in query for w in ["developer", "who made you", "tumhe kisne banaya", "kaun banaya"]):
             developer_info()
         elif "chinese" in query:
-            try:
-                speak("Theek hai sir ab typing shuru kar rahi hoon")
-                pyautogui.write("[CHINESE]: Nǐ hǎo, wǒ shì Silpia", interval=0.03)
-                pyautogui.press('enter')
-            except Exception:
-                pass
+            speak("Theek hai sir, Chinese mein Nǐ hǎo, wǒ shì Silpia")
         elif "spanish" in query:
-            try:
-                speak("Theek hai sir ab typing shuru kar rahi hoon")
-                pyautogui.write("[SPANISH]: Hola, soy Silpia", interval=0.03)
-                pyautogui.press('enter')
-            except Exception:
-                pass
+            speak("Theek hai sir, Spanish mein Hola, soy Silpia")
         elif "law" in query or "kanoon" in query:
             global_knowledge_helper("kanoon")
         elif "engineer" in query or "tech" in query:
@@ -126,5 +107,8 @@ if __name__ == "__main__":
             global_knowledge_helper("hacking")
         elif any(w in query for w in ["hello shilpi", "shilpi", "hi shilpi", "shilpa", "silpia"]):
             speak("जी सर, बताइए क्या हुक्म है?")
+        elif query == "exit":
+            speak("Alvida sir!")
+            break
         else:
-            speak("Hukum dijiye sir is command par kya action lena hai")
+            speak(f"Aapne kaha hai, {query}. Is vishay par abhi mere paas data nahi hai sir, par aapka yeh hukum mujhe mil gaya hai.")
