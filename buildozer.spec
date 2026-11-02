@@ -39,4 +39,4 @@ android.api = 31
 android.minAPI = 21
 
 # (bool) Use D8 for dexing
-android.accept_sdk_license = Ture
+android.accept_sdk_license = True
