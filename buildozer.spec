@@ -33,7 +33,7 @@ orientation = portrait
 android.permissions = INTERNET, RECORD_AUDIO
 
 # (int) Target Android API, should be as high as possible.
-android.api = 33
+android.api = 31
 
 # (int) Minimum API your APK will support.
 android.minAPI = 21
