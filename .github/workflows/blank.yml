@@ -18,7 +18,7 @@ jobs:
         sudo apt-get install -y software-properties-common
         sudo add-apt-repository -y ppa:deadsnakes/ppa
         sudo apt-get update
-        sudo apt-get install -y python3.10 python3.10-dev python3.10-venv python3-pip build-essential git ffmpeg libltdl-dev zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl
+        sudo apt-get install -y python3.10 python3.10-dev python3.10-venv python3-pip build-essential git ffmpeg libltdl-dev libzip-dev zlib1g-dev
 
     - name: Force Default Python to 3.10
       run: |
@@ -31,6 +31,13 @@ jobs:
         pip install --upgrade "cython<3.0"
         pip install --upgrade buildozer
         pip install --upgrade git+https://github.com/kivy/python-for-android.git
+
+    - name: Setup Swap Space
+      run: |
+        sudo fallocate -l 4G /swapfile
+        sudo chmod 600 /swapfile
+        sudo mkswap /swapfile
+        sudo swapon /swapfile
 
     - name: Build APK with Buildozer
       run: |
