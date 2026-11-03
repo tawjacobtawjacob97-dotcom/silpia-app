@@ -19,7 +19,7 @@ source.exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # (list) Application requirements
-requirements = python3,kivy,pyjnius
+requirements = python3,kivy
 
 # (str) Supported orientations
 orientation = portrait
