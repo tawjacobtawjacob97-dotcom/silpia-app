@@ -8,7 +8,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 version = 0.1
 
-requirements = python3,kivy,speechrecognition
+requirements = python3,kivy,speechrecognition,pyjnius,gtts,android
 
 orientation = portrait
 
