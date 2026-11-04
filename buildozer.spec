@@ -17,6 +17,8 @@ orientation = portrait
 #
 android.python_version = 3.10
 
+log_level = 2
+
 p4a.branch = master
 
 android.permissions = INTERNET, RECORD_AUDIO
