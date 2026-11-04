@@ -8,7 +8,7 @@ source.include_exts = py,png,jpg,kv,atlas
 
 version = 0.1
 
-requirements = python3,kivy
+requirements = python3,kivy,speechrecognition
 
 orientation = portrait
 
@@ -16,6 +16,8 @@ orientation = portrait
 # Android specific
 #
 android.python_version = 3.10
+
+p4a.branch = master
 
 android.permissions = INTERNET, RECORD_AUDIO
 
