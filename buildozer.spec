@@ -41,7 +41,7 @@ android.use_dex = True
 android.accept_sdk_license = True
 
 # (str) python-for-android branch (Python 3.14 की एरर रोकने के लिए स्थिर ब्रांच)
-p4a.branch = release-2024.01.3
+p4a.branch = master
 
 orientation = portrait
 
