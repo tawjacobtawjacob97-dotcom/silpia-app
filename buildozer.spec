@@ -20,7 +20,7 @@ version = 0.1
 
 # (list) Application requirements
 # यहाँ gtts, kivy और pyjnius को जोड़ दिया गया है
-requirements = python3,kivy,pyjnius,gtts
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 #requirements.source.kivy = ../../kivy
