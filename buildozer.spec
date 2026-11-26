@@ -40,7 +40,7 @@ android.use_dex = True
 # (bool) Automatically accept Android SDK license
 android.accept_sdk_license = True
 
-android.ndk = 25b
+android.ndk = 23b
 
 # (str) python-for-android branch (Python 3.14 की एरर रोकने के लिए स्थिर ब्रांच)
 p4a.branch = develop
